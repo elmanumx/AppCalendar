@@ -1,0 +1,68 @@
+<h3>{{titu}}</h3>
+<div ng-cloak>
+  <md-content>
+    <md-tabs md-dynamic-height md-border-bottom>
+      <md-tab label="Clases">
+        <md-content class="md-padding">
+          <div layout="row" ng-repeat = "materia in materias">
+                <md-button class="md-raised full" flex="auto" href="#/materia/{{materia.id}}">
+                    <h2 class="linea-b" >{{materia.nombreM}}</h2>
+                    <span class="linea-t">{{materia.hora}}</span>
+                </md-button>
+            </div>
+        </md-content>
+      </md-tab>
+      <md-tab label="Notas">
+        <md-content class="md-padding">
+            <div layout="row">
+                <md-button class="md-raised full md-warn" flex="auto">
+                    <h5>Tarea</h5>
+                </md-button>
+                <md-button class="md-raised full md-warn" flex="auto">
+                    <h5>Tarea</h5>
+                </md-button>
+            </div>
+            <div layout="row">
+                <md-button class="md-raised full md-warn" flex="auto">
+                    <h5>Tarea</h5>
+                </md-button>
+                <md-button class="md-raised full md-warn" flex="auto">
+                    <h5>Tarea</h5>
+                </md-button>
+            </div>
+             <div layout="row">
+                <md-button class="md-raised full md-warn" flex="auto">
+                    <h5>Tarea</h5>
+                </md-button>
+                <md-button class="md-raised full md-warn" flex="auto">
+                    <h5>Tarea</h5>
+                </md-button>
+            </div>
+        </md-content>
+      </md-tab>
+      <md-tab label="Eventos">
+        <md-content class="md-padding">
+             <div layout="row">
+                <md-button class="md-raised full md-accent" flex="auto">
+                    <h5>evento</h5>
+                </md-button>
+                <md-button class="md-raised full md-accent" flex="auto">
+                    <h5>evento</h5>
+                </md-button>
+            </div>
+             <div layout="row">
+                <md-button class="md-raised full md-accent" flex="auto">
+                    <h5>evento</h5>
+                </md-button>
+                <md-button class="md-raised full md-accent" flex="auto">
+                    <h5>evento</h5>
+                </md-button>
+            </div>
+        </md-content>
+      </md-tab>
+    </md-tabs>
+  </md-content>
+  <md-content ng-show=" materias == ''">
+    <h2>No tiene Materia capturadas.. </h2>
+  </md-content>
+</div>

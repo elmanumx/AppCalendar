@@ -1,0 +1,11 @@
+<h1>{{titulo}}</h1>
+<md-divider></md-divider>
+	<div layout="row" ng-repeat = "materia in materias">
+	    <md-button class="md-raised full" flex="auto" href="#/materia/{{materia.id}}">
+	        <h2 class="linea-b" >{{materia.nombreM}}</h2>
+	        <span class="linea-t">{{materia.hora}}</span>
+	    </md-button>
+    </div>
+    <md-button class="md-fab md-primary md-hue-2 btn-right" aria-label="Profile" href="#/add/materia/">
+        <i class="material-icons md-3 mt1">add</i>
+    </md-button>

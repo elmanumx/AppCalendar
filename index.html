@@ -1,0 +1,69 @@
+<html lang="en" ng-app="CalendarApp">
+  <head>
+    <link rel="stylesheet" href="assets/css/angular-material.min.css">
+    <meta name="viewport" content="initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- estilo css para los iconos materiales-->
+    <link href="assets/css/ico/css/material-wfont.min.css" rel="stylesheet">
+
+
+
+  </head>
+  <body layout="column" ng-controller="menuCtrl" ng-cloak>
+    <md-toolbar layout="row">
+      <div class="md-toolbar-tools">
+        <!--
+        <md-button ng-click="back()" class="md-icon-button">
+          <i class="material-icons md-3 mt1">arrow_back</i>
+        </md-button>-->
+       <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
+          <i class="ico-2 mdi-communication-forum"></i>
+        </md-button>
+       <h1 class="titulo">Lunes |<span class="md-caption"> 23/10/2015</span> - </h1>
+      </div>
+    </md-toolbar>
+    <div layout="row" flex>
+        <!--- Menu -->
+          <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+              <md-toolbar class="md-tall md-hue-2">
+                <span flex></span>
+                <div layout="column" class="md-toolbar-tools-bottom inset">
+                     <user-avatar class="avatar"></user-avatar>
+                  <span></span>
+                  <div>Emmanuel Izquierdo</div>
+                  <div>email@domainname.com</div>
+                </div>
+              </md-toolbar>
+              <md-list> 
+                  <md-list-item ng-click="ira(menu.menuL)"  ng-repeat="menu in menus">
+                    <div class="inset">
+                     <i class="{{menu.menuI}}"></i> 
+                    </div>
+                    <p>{{menu.menuT}}</p>
+                  </md-list-item>
+              </md-list>
+              
+        </md-sidenav>
+        <!-- fin menu-->
+        <div layout="column" flex id="content">
+            <md-content layout="column" flex class="md-padding" ng-view>
+            <!--Contenido principal-->
+                
+            </md-content>
+        </div>
+   <!-- <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="ctrl.openMenu($mdOpenMenu, $event)">
+        <i class="material-icons md-3 mt1">more_vert</i>
+      </md-button>-->
+    </div>
+    <!-- Angular Material Dependencies -->
+    <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-resource.min.js"></script>
+    <script src="assets/js/angular-route.min.js"></script>
+    <script src="assets/js/angular-animate.min.js"></script>
+    <script src="assets/js/angular-aria.js"></script>
+
+    <script src="assets/js/angular-material.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/controller.js"></script>
+  </body>
+</html>

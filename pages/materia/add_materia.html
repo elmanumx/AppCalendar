@@ -1,0 +1,19 @@
+<h1>{{titulo}}</h1>
+<form>
+  <md-input-container>
+    <label>Materia * </label>
+    <input ng-model="nMateria" required>
+  </md-input-container>
+  <md-input-container>
+    <label>Biography</label>
+    <textarea name="bio" ng-model="biography" required md-maxlength="150"></textarea>
+    <div ng-messages="userForm.bio.$error" ng-show="userForm.bio.$dirty">
+      <div ng-message="required">This is required!</div>
+    </div>
+  </md-input-container>
+  <md-button class="md-accent md-raised md-primary"
+  type="submit"
+  ng-disabled="newAdForm.$invalid">
+  Publish
+</md-button>
+</form>
